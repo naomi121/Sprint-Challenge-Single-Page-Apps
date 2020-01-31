@@ -1,16 +1,25 @@
 import React from "react";
+import styled from 'styled-components';
 
-const CharacterCard = props => {
+
+export default function CharacterCard(props) {
+  const Card = styled.div`
+  width: 30%;
+  border-radius: 8px;
+  border: solid black 1px;
+  padding: 1rem;
+  background-color: lightcoral;
+  margin: 3%;
+  box-shadow: 10px 10px 8px #888888;`;
+   
+
+
+
   return (
-    <div className="grid-view">
-    <div className="character-card">
-      <h1>{props.name}</h1>
-        <p>{props.species}</p>
-        <p>{props.gender}</p>
-    </div>
-    </div>
-  )
+    <Card>
+      <h2>{props.name}</h2>
+      <p>{props.species}</p>
+      <p>{props.gender}</p>
+    </Card>
+  );
 }
-
-
-export default CharacterCard;
